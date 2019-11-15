@@ -14,7 +14,7 @@
 			</li>
 		  </ul>
 		  <form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="text" placeholder="Tapez un mot..." onKeyUp="check(this)" onChange="check(this)">
+			<input id="search_bar" class="form-control mr-sm-2" type="text" placeholder="Tapez un mot..." onKeyUp="check(this)" onChange="check(this)">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 			<a class="nav-link" href="./connexion.php">Connexion</a>
 		  </form>
