@@ -61,3 +61,7 @@ input[type=submit]:hover {
     color: steelblue;
     border: 1px solid #0c3388;
 }
+
+#tst{
+    color: red;
+}
