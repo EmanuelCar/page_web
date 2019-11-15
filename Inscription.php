@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="Inscription.css" media="screen" type="text/css" />
-  <?php require './assets/vendors/Curl/Inscriptionsend.php'; ?>
+  <?php require './Curl/Inscriptionsend.php'; ?>
   <?php error_reporting(0); ?>
   <title>Inscription</title>
 </head>

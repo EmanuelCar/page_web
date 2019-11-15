@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Connexion.css" media="screen" type="text/css" />
-    <?php include "./assets/vendors/Curl/connexionsend.php" ?>
+    <?php include "./Curl/connexionsend.php" ?>
     <?php error_reporting(0); ?>
     <title>Connexion</title>
 </head>
