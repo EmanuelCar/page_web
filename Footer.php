@@ -70,8 +70,6 @@
 		</div>
 		<!-- Footer links -->
 
-		<hr>
-
 	</div>
 	<!-- Footer Links -->
 
