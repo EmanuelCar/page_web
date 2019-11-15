@@ -1,0 +1,137 @@
+main
+{
+	margin-top: 25px;
+	margin-bottom: 50px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+*{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2
+{
+	margin-left: 20px;
+}
+
+
+body
+{
+	background-color: white;
+}
+
+.navbar
+{
+    background-color: black !important;
+	font-size: x-large;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+
+
+.logo_accueil{
+	height: auto;
+	width: auto;
+}
+
+.img_event{
+	text-align: center;
+	width: 100%;
+}
+
+.Bandeau{
+	height: 300px;
+	width: 100%;
+}
+
+.Panier_btq{
+    height: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+.card
+{
+	background-color: #d0d0ce;
+	width: 100%;
+	height: 295px;
+	border-color: black;
+}
+
+
+.objet{
+	/*margin-left: 2px;*/
+	margin-right: auto;
+	margin-top: 2px;
+	height: 50%;
+}
+
+.img_event{
+	height:250px;
+}
+
+.card-body{
+	margin-top: 2px;
+	text-align: justify;	
+}
+
+
+.btn{
+	background-color: grey;
+	border-color: black;
+	color: #d0d0ce;
+}
+
+a
+{
+    transition-duration: 0.25s;
+}
+
+a:hover{
+	color: #ea7600 !important;
+	transition-duration: 0.25s;
+}
+
+.btn:hover{
+    color: #ea7600 !important;
+    background-color: white;
+	transition-duration: 0.10s;
+	border-color: black;
+}
+
+body nav a:link
+{
+	vertical-align: middle;
+	text-decoration: none;
+
+}
+
+
+.Panier{
+	height: auto !important;
+	text-align: center;
+}
+
+
+footer{
+	background-color: black;
+	color: #d0d0ce;
+}
+
+footer a{
+	color: #d0d0ce;
+}
+
+header a{
+	color: #d0d0ce;
+}
+
+
+.navbar-toggler-icon{
+    background-color: black;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

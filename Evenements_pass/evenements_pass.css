@@ -1,0 +1,87 @@
+* {
+    font-family: Calibri;
+}
+
+a {
+    color: white;
+    transition-duration: 0.5s;
+}
+
+body {
+    font-family: 'Roboto Condensed';
+}
+
+a:hover {
+    color: hsla(39, 100%, 66%, 1) !important;
+    transition-duration: 0.5s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: hsla(39, 100%, 66%, 1) !important;
+    transition-duration: 0.5s;
+    background-color: black;
+    border-color: black;
+}
+
+.btn {
+    color: white;
+    border-color: black;
+}
+
+.navbar {
+    background-color: black !important;
+    width: 100%;
+    z-index: 1;
+    font-size: x-large;
+}
+
+footer {
+    background-color: black;
+    color: #d0d0ce;
+    width: 100%;
+}
+
+footer a {
+    color: #d0d0ce;
+}
+
+.card {
+    width: 50%;
+    background-color: black;
+    color: white;
+    margin: auto;
+}
+
+.cardt {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+h4 {
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    text-decoration-line: underline;
+    background-color: #69b3e7;
+}
+
+.navbar-toggler-icon {
+    background-color: black;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.Panier_btq {
+    height: 30px;
+}

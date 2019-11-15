@@ -1,0 +1,54 @@
+* {
+    font-family: Calibri;
+}
+
+body {
+    background-color: #5c88da;
+    background-repeat: no-repeat;
+}
+
+#container {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+
+/* Mise en forme de l'encadré d'inscription */
+
+form {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+/* Style des boutons */
+
+input[type=submit] {
+    background-color: steelblue;
+    color: white;
+    padding: 1%;
+    margin: 1% 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    resize: vertical;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: steelblue;
+    resize: vertical;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+h2 {
+    color: #006f62;
+    text-align: center;
+}

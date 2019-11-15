@@ -1,0 +1,153 @@
+* {
+    font-family: Calibri;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+
+/* Toggle Styles */
+
+#viewport {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+
+/* Style de la barre de navigation latérale */
+
+#sidebar {
+    position: fixed;
+    width: 11%;
+    height: 100%;
+    overflow-y: auto;
+    background: black;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 3;
+}
+
+#sidebar header {
+    background-color: white;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar header a:hover {
+    color: #fff;
+}
+
+#sidebar .nav a {
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    width: auto;
+    display: block;
+    text-align: center;
+}
+
+#sidebar .nav a:hover {
+    background: none;
+    color: #ECEFF1;
+}
+
+#sidebar .nav a i {
+    margin-right: 16px;
+}
+
+
+/*Style de la barre de navigation*/
+
+.navbar {
+    background-color: black !important;
+    width: 100%;
+    z-index: 1;
+    padding-left: 12%;
+    font-size: x-large;
+}
+
+
+/*Style des liens-texte*/
+
+a {
+    color: white;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    color: hsla(39, 100%, 66%, 1) !important;
+    transition-duration: 0.5s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/*Style des boutons*/
+
+.btn:hover {
+    color: hsla(39, 100%, 66%, 1) !important;
+    transition-duration: 0.5s;
+    background-color: black;
+    border-color: black;
+}
+
+.btn {
+    color: white;
+    border-color: black;
+}
+
+
+/*Style du container*/
+
+.container-fluid {
+    padding-left: 16%;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+/*Style du footer*/
+
+footer {
+    background-color: black;
+    color: #d0d0ce;
+    margin-left: 8%;
+    width: 100%;
+}
+
+footer a {
+    color: #d0d0ce;
+}
+
+.navbar-toggler-icon {
+    background-color: black;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='blue' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.Panier_btq {
+    height: 30px;
+}

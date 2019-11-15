@@ -1,0 +1,186 @@
+main
+{
+	margin-top: 25px;
+	margin-bottom: 50px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+*{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2
+{
+	margin-left: 20px;
+}
+
+
+body
+{
+	background-color: #d0d0ce;
+}
+
+.navbar
+{
+    background-color: black !important;
+	font-size: x-large;
+}
+
+
+.bg-black{
+    background-color: black;
+}
+
+.caroussel_img{
+	width: auto;
+}
+
+.logo_accueil{
+	height: auto;
+	width: auto;
+}
+
+img.carouf{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.carousel{
+	width: 90%;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 50px;
+	background-color: none !important;
+}
+
+.Bandeau{
+	height: 150px;
+	width: 100%;
+}
+
+.card
+{
+	background-color: #b1b3b3;
+	width: 98%;
+	box-shadow: 3px 3px 3px;
+}
+
+.Panier_btq{
+    height: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+.objet{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	width: 75%;
+	height: 75%;
+}
+
+.btn{
+	background-color: grey;
+	border-color: black;
+	color: #d0d0ce;
+}
+
+
+
+
+
+a
+{
+    transition-duration: 0.25s;
+}
+
+a:hover{
+    color: #ea7600 !important;
+	transition-duration: 0.25s;
+}
+
+.btn:hover{
+    color: #ea7600 !important;
+    background-color: white;
+	transition-duration: 0.10s;
+}
+
+body nav a:link
+{
+	vertical-align: middle;
+	text-decoration: none;
+
+}
+
+
+.Panier{
+	height: auto !important;
+	text-align: center;
+}
+
+
+footer{
+	background-color: black;
+	color: #d0d0ce;
+}
+
+footer a{
+	color: #d0d0ce;
+}
+
+header a{
+	color: #d0d0ce;
+}
+
+
+
+
+
+
+
+
+
+.col-xs-0, 
+.col-sm-0,
+.col-md-0,
+.col-lg-0 {
+  flex: 0 0 0;
+  max-width: 0;
+}
+
+
+
+
+.col-md-offset-1{
+	margin-left: 7.80%;
+}
+
+.col-md-offset-2{
+	margin-left: 16.666%;
+}
+
+col-md-offset-0{
+	margin-left: 0%;
+}
+
+.col-lg-offset-1{
+	margin-left: 8%;
+}
+
+.col-lg-offset-2{
+	margin-left: 16.666%;
+}
+
+
+.col-lg-offset-3 {
+	margin-left: 25%;
+  }
+
+.col-lg-offset-6 {
+	margin-left: 50%;
+  }
