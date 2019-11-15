@@ -45,7 +45,7 @@
 					<a href="https://www.cesi.fr/mentions-legales/">Mentions légales</a>
 				</p>
 				<p>
-					<a href="../CGV/CGV.php">Conditions Générales de Vente</a>
+					<a href="/SiteWeb/CGV/CGV.php">Conditions Générales de Vente</a>
 				</p>
 				<p>
 					<a href="https://www.cesi.fr/brochures/">Brochures</a>

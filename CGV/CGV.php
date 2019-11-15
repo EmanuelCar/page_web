@@ -107,8 +107,8 @@
 		<br><br><br>10 - Attribution de juridiction
 		Les présentes conditions annulent et remplacent les
 		conditions précédemment applicables. Tout litige relatif
-		aux présentes sera de la compétence du tribunal mixte
-		de commerce de Nouméa.
+		aux présentes sera de la compétence du tribunal de commerce.
+		<br><br>
 	</p>
 </body>
 

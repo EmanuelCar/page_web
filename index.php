@@ -8,16 +8,28 @@
 	<link rel="stylesheet" href="./assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./Accueil/accueil.css">
   <title>BDE Cesi Nancy</title> <!-- Titre du site web -->
+  <?php error_reporting(0); ?>
 </head>
 
 <header>
 	<!--Navbar-->
-	<?php include "./Navbar.php" ?>
+  <?php 
+  if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "./Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "./Navbar_admin_log.php";
+  } else {
+    include "./Navbar.php";} 
+  ?>
 </header>
 
-
-
 <body>
+
+  <div id="cookieConsent">
+      <div id="closeCookieConsent">x</div>
+      Ce site utilise des cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a>
+  </div>
+
   <div id="viewport">
     <!-- Sidebar -->
     <div id="sidebar">
@@ -29,7 +41,7 @@
       <ul class="nav">
 
         <li>
-          <a class="nav-link" href="‪./Evenements_pass/evenements_pass.php">Evènements passés</a>
+          <a class="nav-link" href="./Evenements_pass/evenements_pass.php">Evènements passés</a>
         </li>
 
         <li>
@@ -74,4 +86,6 @@
 <!-- Scripts / JQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="./assets/vendors/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="/SiteWeb/cookiechoices.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', '169.254.168.183');});</script>
 </html>

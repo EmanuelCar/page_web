@@ -1,9 +1,9 @@
 <?php
 
 
-require '../assets/Vendors/Curl/curlconf.php';
+require '../Curl/configuration/curlconf.php';
 
-$get_data = callAPI('GET', '10.154.128.76:3000/event/actuel', false);
+$get_data = callAPI('GET', '169.254.168.183:3000/event/actuel', false);
 $response = json_decode($get_data, true);
 
 

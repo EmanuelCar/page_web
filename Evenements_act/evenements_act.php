@@ -28,8 +28,6 @@
 	<!-- w3 créer le conteneur pour placer/centrer les évenements-->
 	<div class="w3-content" style="max-width:1400px">
 
-
-
 		<!-- Grille -->
 		<div class="w3-row">
 			<!-- Evenements -->
