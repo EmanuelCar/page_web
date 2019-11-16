@@ -1,12 +1,18 @@
 <?php
 require '../Curl/configuration/curlconf.php';
 require '../Curl/configuration/curlconf2.php';
+require '../Curl/configuration/curlconf3.php';
 
 $get_data = callAPI('GET', 'http://localhost:3000/event/passe', false);
 $response = json_decode($get_data, true);
 
 $make_calls = callAPI1('GET', 'http://localhost:3000/comment/liste', false);
 $respont = json_decode($make_calls, true);
+
+
+$make = callAPI2('GET', 'http://localhost:3000/photo/like/', false);
+$nombre = json_decode($make, true);
+
 
 //echo $response["évènements"][0]["évènement"];
 if ($response["message"] == "Liste des évènements passés") {
@@ -33,15 +39,26 @@ if ($response["message"] == "Liste des évènements passés") {
     for ($j = 0; $j < count($response["photo"]); $j++) {
       $URL = $response["photo"][$j]["URL"];
       $parent = $response["photo"][$j]["évènement"];
+      $like = $nombre["like"][$j]["nombre"];
+      $image = $nombre["like"][$j]["URL"];
 
       if ($parent == $nom) {
         echo '<div class="carousel-item">
-        <img class="caroussel_img carouf" src="' . $URL . '" height="300px" width="100%" alt="Second slide">
-        <br />
+        <img class="caroussel_img carouf" src="' . $URL . '" height="300px" width="100%" alt="Second slide">';
+        if ($image == $URL) {
+          echo '<p class="card-text">' . $like . '</p>';
+        } else {
+          echo '<p class="card-text">0</p>';
+        }
+        echo ' <br />
         <br />
                 <form action="./liker.php" method="POST">
                 <input hidden  type="text" name="photo" value="' . $URL . '">
                 <button  class="btn btn-primary">aime cette photo</button>
+                </form>
+                <form action="./commenter.php" method="POST">
+                <input hidden  type="text" name="comm" value="' . $URL . '">
+                <button  class="btn btn-secondary">commenter cette photo</button>
                 </form>
                 <br />
                 <br /> ';
