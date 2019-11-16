@@ -24,12 +24,22 @@
 </header>
 
 <body>
-	<h2>Nos meilleurs ventes :</h2>
 	<!-- Caroussel -->
 	<?php include "../Curl/best3.php"?>
+	<form method="POST">
+		<select name="tri" id="tri" required>
+			<option value="">Tri</option>
+			<option value="1">Par défaut</option>
+			<option value="2">Trier par prix</option>
+			<option value="3">Trier par catégorie</option>
+		</select>
+			<input type="submit" name='submit' value='Appliquer'>
+	</form>
 
 	<!-- Articles en vente -->
-	<?php include "Articles.php"?>
+	<?php 
+	include "../Curl/tri.php";
+	?>
 </body>
 
 

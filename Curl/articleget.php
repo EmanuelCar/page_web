@@ -21,7 +21,9 @@ echo '
 			<img src="'.$urla.'" class="objet">
 			<div class="card-body">
 				<h5>'.$noma.'</h5>
-				<a href="#" class="btn btn-primary">Fiche produit</a>
+				<p>'.$description.'</p>
+				<a href="#" class="btn btn-primary">Ajouter au panier</a>
+				<p>'.$prix.' €</p>
 			</div>
 		</article>
 	</div>

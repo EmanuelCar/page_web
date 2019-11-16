@@ -8,7 +8,7 @@
 				<p style="text-align: right; font-size:x-large"> Nos Articles disponibles </p>
 			</div>
 			<!-- Fin séparateur -->
-
+			
 			<?php include '../Curl/articleget.php' ?>
 
 			<p id="p1"></p>
