@@ -1,8 +1,8 @@
 <?php
 
-$URL = !empty($_POST['comm']) ? trim($_POST['comm']) : null;
+$nom = !empty($_POST['event']) ? trim($_POST['event']) : null;
 
-require 'commentersend.php';
+require 'photosend.php';
 ?>
 
 <!DOCTYPE html">
@@ -20,13 +20,13 @@ require 'commentersend.php';
 
     <div id="container">
         <form  method="POST">
-            <h2>Ajoutez votre commentaire</h2>
+            <h2>Ajoutez l'URL de votre photo</h2>
             <br>
-            commentaire : <input name="nom" size=auto required>
+            URl de la photo : <input type="URL" name="URL" size=auto required>
             <P>
-            <input hidden  type="text" name="comm" value="<?php echo $URL; ?>">
-                <input type="submit" name='submit' value="Ajouter commentaire">
-                <?php if ($response["message"] != "Commentaire ajouté !") {
+            <input hidden  type="text" name="event" value="<?php echo $nom; ?>">
+                <input type="submit" name='submit' value="Ajouter photo">
+                <?php if ($response["message"] != "L'image a bien été ajoutée !") {
                                         echo $response["message"];
                                     } ?>
                 <img src="../img/logo_cesi.png" alt="cesi" height=200px>

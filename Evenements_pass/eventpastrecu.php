@@ -97,7 +97,11 @@ if ($response["message"] == "Liste des évènements passés") {
       <div class="card-body">
         <h5 class="card-title">' . $nom . '</h5>
         <p class="card-text">' . $description . '</p>
-        <a href="../Ajout_photo/form_admin.php" class="btn btn-primary">Ajouter une photo</a>
+        </form>
+        <form action="./addPhoto.php" method="POST">
+        <input hidden  type="text" name="event" value="' . $nom . '">
+        <button  class="btn-primary">ajouter une photo</button>
+        </form>
       </div>
     </div>
     <br />';

@@ -4,11 +4,7 @@ require '../Curl/configuration/curlconf.php';
 $get_data = callAPI('GET', 'http://localhost:3000/panier/user', false);
 $response = json_decode($get_data, true);
 
-
-//echo $response["évènements"][0]["évènement"];
 if ($response["message"] == "Affichage du panier") {
-
-
 
     for ($i = 0; $i < count($response["commande"]); $i++) {
 
