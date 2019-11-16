@@ -20,16 +20,14 @@ if(isset($_POST['charte'])){
             
         );
     
-    $make_call = callAPI('POST','10.154.128.76:3000/user/inscription',json_encode($data_array));
-    $response = json_decode($make_call,true);
-    
-    $yes = $response["message"];
-    
-    if ($yes ==  "Compte créé avec succès ! "){
-    header('location: BDEnancy.php');
+        $make_call = callAPI('POST','169.254.168.183:3000/user/inscription',json_encode($data_array));
+        $response = json_decode($make_call,true);
+
+        $yes = $response["message"];
+        
+        if ($yes ==  "Compte créé avec succès !"){
+            header('Location: /SiteWeb/');
+        }
     }
-}
 
-} else {
-
-}
+} 

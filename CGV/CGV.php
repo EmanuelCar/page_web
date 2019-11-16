@@ -8,12 +8,18 @@
 	<link rel="icon" href="../favicon.png">
 	<link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./boutique.css">
+	<?php error_reporting(0); ?>
 </head>
 
 
 <header>
 	<!--Navbar-->
-	<?php include "../Navbar.php" ?>
+	<?php if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "./Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "./Navbar_admin_log.php";
+  } else {
+    include "./Navbar.php";}?>
 </header>
 
 <body>
@@ -107,8 +113,8 @@
 		<br><br><br>10 - Attribution de juridiction
 		Les présentes conditions annulent et remplacent les
 		conditions précédemment applicables. Tout litige relatif
-		aux présentes sera de la compétence du tribunal mixte
-		de commerce de Nouméa.
+		aux présentes sera de la compétence du tribunal de commerce.
+		<br><br>
 	</p>
 </body>
 

@@ -8,11 +8,17 @@
 	<link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="evenements_pass.css" />
   <title>Evènements passés</title> <!-- Titre du site web -->
+  <?php error_reporting(0); ?>
 </head>
 
 
 <header>
-  <?php include "../Navbar.php" ?>
+  <?php   if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "../Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "../Navbar_admin_log.php";
+  } else {
+    include "../Navbar.php";} ?>
 </header>
 
 <body>

@@ -3,7 +3,11 @@
 
 require '../Curl/configuration/curlconf.php';
 
+<<<<<<< HEAD
 $get_data = callAPI('GET', 'localhost:3000/event/actuel', false);
+=======
+$get_data = callAPI('GET', '169.254.168.183:3000/event/actuel', false);
+>>>>>>> 2b62419952fa8263937c48d78a51dffdcf859182
 $response = json_decode($get_data, true);
 
 

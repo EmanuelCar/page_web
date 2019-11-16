@@ -2,7 +2,7 @@
 
 require 'configuration/curlconf2.php';
 
-$get_data = callAPI1('GET', '10.154.128.76:3000/article', false);
+$get_data = callAPI1('GET', '169.254.168.183:3000/article', false);
 $response = json_decode($get_data, true);
 
 if ($response["message"] == "Récupération des articles réussi") {

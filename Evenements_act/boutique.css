@@ -1,11 +1,11 @@
-main
+/*main
 {
 	margin-top: 25px;
 	margin-bottom: 50px;
 	margin-right: 15px;
 	margin-left: 15px;
 }
-
+*/
 *{
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -24,14 +24,14 @@ body
 .navbar
 {
     background-color: black !important;
-	font-size: x-large;
+    width: 100%;
+    z-index: 1;
+    font-size: x-large;
 }
 
 .bg-black{
     background-color: black;
 }
-
-
 
 .logo_accueil{
 	height: auto;
@@ -120,6 +120,7 @@ body nav a:link
 footer{
 	background-color: black;
 	color: #d0d0ce;
+	width: 100%;
 }
 
 footer a{

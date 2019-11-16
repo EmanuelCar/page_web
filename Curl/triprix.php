@@ -2,7 +2,7 @@
 
 require 'configuration/curlconf3.php';
 
-$get_data = callAPI2('GET', '10.154.128.76:3000/article/tri/prix', false);
+$get_data = callAPI2('GET', '169.254.168.183:3000/article/tri/prix', false);
 $response = json_decode($get_data, true);
 if($_POST['dropdown-content'] == "b") {
     if ($response["message"] == "Le tri par prix est effectif") {

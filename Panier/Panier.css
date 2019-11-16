@@ -6,11 +6,6 @@ main
 	margin-left: 15px;
 }
 
-h2
-{
-	margin-left: 20px;
-}
-
 body
 {
 	background-color: #d0d0ce;
@@ -20,36 +15,6 @@ body
 {
     background-color: black !important;
 	font-size: x-large;
-}
-
-
-.bg-black{
-    background-color: black;
-}
-
-.caroussel_img{
-	width: auto;
-}
-
-.logo_accueil{
-	height: auto;
-	width: auto;
-}
-
-img.carouf{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 400px;
-}
-
-.carousel{
-	width: 90%;
-	height: 250px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: auto;
-	margin-bottom: 50px;
 }
 
 .Bandeau{
@@ -76,14 +41,11 @@ img.carouf{
 	height: 70%;
 }
 
-
-
 .btn{
 	background-color: grey;
 	border-color: black;
 	color: #d0d0ce;
 }
-
 
 a
 {
@@ -108,13 +70,11 @@ body nav a:link
 
 }
 
-
 .Panier_btq{
     height: 30px;
     text-align: center;
     background-color: white;
 }
-
 
 footer{
 	background-color: black;
@@ -123,6 +83,7 @@ footer{
 
 footer a{
 	color: #d0d0ce;
+	text-decoration: none !important;
 }
 
 header a{
@@ -132,4 +93,9 @@ header a{
 .navbar-toggler-icon{
     background-color: black;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.container-fluid, .row, .col-lg-1 {
+    max-height: 500px;
+	overflow-y: hidden; /* don't show content that exceeds my height */
 }
