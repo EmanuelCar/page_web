@@ -90,16 +90,12 @@ img.carouf{
 	color: #d0d0ce;
 }
 
-
-
-
-
-a
+a, #barre_boutons_admin input
 {
     transition-duration: 0.25s;
 }
 
-a:hover{
+a:hover, #barre_boutons_admin input:hover{
     color: #ea7600 !important;
 	transition-duration: 0.25s;
 }
@@ -164,7 +160,15 @@ header a{
 	text-align: center;
 }
 
-#barre_boutons_admin a {
+#barre_boutons_admin input {
+    border: none;
+	background-color: black !important;
+	display : inline-block;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#barre_boutons_admin a, #barre_boutons_admin input {
 	color: white;
 }
 

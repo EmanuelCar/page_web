@@ -13,7 +13,7 @@ echo'<select name="recup" id="recup" required>
 
     for($j = 0; $j<$nbr; $j++) {
         $categorie = $response["catégories"][$j]["Nom"];
-        echo'<option value='. $categorie .' selected>'.$categorie.'</option>';
+        echo'<option value="'. $categorie .'" selected>'.$categorie.'</option>';
     }
 echo'</select>';
 

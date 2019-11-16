@@ -80,11 +80,15 @@
 
 					<div id="wrapper" style="min-height: 50px;"></div>
 					<div id="barre_boutons_admin">
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Télécharger les photos </div></a>
+						<form id='myform' method="POST">
+						<a href=""><div class="bouton_admin">
+						<input type="submit" name="submit" value="Télécharger les photos"></input></div></a>
+						</form>
 					</div>
 				</div>
 
+				<?php include '../Personnel/dnlwphoto.php' ?>
+				
 				<div id="contenu">
 					<div id="wrapper" style="min-height: 50px;"><h1> Signaler</h1></div>
 					<div id="barre_boutons_admin">
