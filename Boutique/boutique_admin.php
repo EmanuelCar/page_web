@@ -12,7 +12,6 @@
 	<?php error_reporting(0); ?>
 </head>
 
-
 <header>
 	<!--Navbar-->
 	<?php if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
@@ -24,13 +23,10 @@
 </header>
 
 <body>
-	<h2>Nos meilleurs ventes :</h2>
-	<!-- Caroussel -->
-	<?php include "../Curl/best3.php"?>
-
 	<!-- Articles en vente -->
 	<?php include "Articles.php"?>
 </body>
+
 
 
 <!-- Footer -->

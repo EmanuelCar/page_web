@@ -26,9 +26,9 @@ echo '
 		</article>
 	</div>
 
-	<div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2">	</div>
+	<div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2"> </div>
 ';
-    } 
+    }
 } else {
 	echo $response["message"];
 }

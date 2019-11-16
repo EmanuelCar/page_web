@@ -13,11 +13,17 @@
 
 <header>
 	<!--Navbar-->
-	<?php include "../Navbar_admin_log.php" ?>
+	<?php if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "../Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "../Navbar_admin_log.php";
+  } else {
+    include "../Navbar.php";} ?>
 </header>
 
 <body>
-	    <!-- L'en-tête -->    
+		<!-- L'en-tête -->    
+		<?php if($_COOKIE['statut'] == 'membre') {?>
 		<header>
     <h1><strong>Membre BDE</strong>[Admin]</h1>
     </header>
@@ -32,9 +38,9 @@
                 <div id="barre_boutons_admin">
                     <a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
                     Ajouter un article </div></a>
-                    <a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+                    <a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
                     Supprimer un article</div></a>
-                    <a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+                    <a href="../Ajout_categorie/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 					Ajouter une catégorie </div></a>
 				</div>
 			</div>
@@ -42,12 +48,10 @@
 			<div id="contenu">
 				<div id="wrapper" style="min-height: 50px;"><h1> Évènement</h1></div>
 				<div id="barre_boutons_admin">
-						<a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
+						<a href="../Ajout_event/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Ajouter un évènement </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre invisible</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible</div></a>
+						Rendre invisible un évènement</div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Liste des inscrits (par évènement)</div></a>
 					</div> 
@@ -60,10 +64,6 @@
 						Rendre invisible une photo </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Rendre invisible un commentaire</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible une photo</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible un commentaire</div></a>
 					</div> 
 			</div>
 
@@ -71,7 +71,10 @@
 
 			</div>
 		</div>
-		
+		<?php } else {?>
+			Vous n'êtes pas autorisé à accéder à ces éléments !
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<?php } ?>
 </body>
 
 <!-- Footer -->
