@@ -105,15 +105,15 @@ a:link {
 
 /*Style des boutons*/
 
-.btn:hover {
-    color: hsla(39, 100%, 66%, 1) !important;
-    transition-duration: 0.5s;
-    background-color: black;
-    border-color: black;
+.btn:hover{
+    color: #ea7600 !important;
+    background-color: white;
+	transition-duration: 0.10s;
 }
 
 .btn {
-    color: white;
+    background-color: grey;
+    color: #d0d0ce;
     border-color: black;
 }
 

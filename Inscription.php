@@ -4,7 +4,7 @@
 <head>
   <link rel="icon" href="./favicon.png">
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="Inscription.css" media="screen" type="text/css" />
   <?php require './Curl/Inscriptionsend.php'; ?>
   <?php error_reporting(0); ?>
@@ -89,7 +89,7 @@
               <br>
               Pour plus d'informations : Retrouvez ici le site <a href="https://ecole-ingenieurs.cesi.fr/?gclid=Cj0KCQiAno_uBRC1ARIsAB496IUO56PHadiYz-OaMpSMqOPzCC4Ww4kW9AwRCaDkbqefS_sdKOyL0qcaAnM-EALw_wcB"> CESI</a>
 
-              <img src="./img/logocesi.png" alt="img_cesi" height="175px">
+              <img src="./img/logocesi.png" alt="img_cesi" height="100px">
 
     </form>
 
@@ -100,6 +100,6 @@
 
 <!-- Scripts / JQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="./assets/vendors/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
 </html>

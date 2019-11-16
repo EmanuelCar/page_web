@@ -59,11 +59,13 @@
 			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
 				<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
 				<p>
-					<i class="fas fa-home mr-3"></i> Nancy, 54500, FR</p>
+					<i class="fa fa-home mr-2"></i> Nancy, 54000, FR</p>
 				<p>
-					<i class="fas fa-envelope mr-3"></i> cesi.pro@viacesi.fr</p>
+					<i class="fa fa-envelope mr-2"></i> cesi.pro@viacesi.fr</p>
 				<p>
-					<i class="fas fa-phone mr-3"></i> 03 83 15 18 60 </p>
+					<i class="fa fa-phone mr-2"></i> 03 83 15 18 60 </p>
+
+
 			</div>
 			<!-- Grid column -->
 

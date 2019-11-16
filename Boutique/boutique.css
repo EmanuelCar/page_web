@@ -86,10 +86,6 @@ img.carouf{
 	color: #d0d0ce;
 }
 
-
-
-
-
 a
 {
     transition-duration: 0.25s;
@@ -119,7 +115,6 @@ body nav a:link
 	text-align: center;
 }
 
-
 footer{
 	background-color: black;
 	color: #d0d0ce;
@@ -127,19 +122,12 @@ footer{
 
 footer a{
 	color: #d0d0ce;
+	text-decoration: none !important;
 }
 
 header a{
-	color: #d0d0ce;
+	color: white;
 }
-
-
-
-
-
-
-
-
 
 .col-xs-0, 
 .col-sm-0,
