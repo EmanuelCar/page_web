@@ -20,7 +20,7 @@ if(isset($_POST['charte'])){
             
         );
     
-        $make_call = callAPI('POST','169.254.168.183:3000/user/inscription',json_encode($data_array));
+        $make_call = callAPI('POST','localhost:3000:/user/inscription',json_encode($data_array));
         $response = json_decode($make_call,true);
 
         $yes = $response["message"];

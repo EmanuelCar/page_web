@@ -8,7 +8,7 @@ if($_POST['submit']) {
     $choix = !empty($_POST['tri']) ? trim($_POST['tri']) : null;
 
     if($choix == 2) {
-        $get_data = callAPI('GET', '169.254.168.183:3000/article/tri/prix', false);
+        $get_data = callAPI('GET', 'localhost:3000/article/tri/prix', false);
         $response = json_decode($get_data, true);
 
         if ($response["message"] == "Le tri par prix est effectif") {
@@ -53,10 +53,10 @@ if($_POST['submit']) {
         }
 
     } else if($choix == 3) {
-        $get_data = callAPI('GET', '169.254.168.183:3000/article/tri/categorie', false);
+        $get_data = callAPI('GET', 'localhost:3000/article/tri/categorie', false);
         $response = json_decode($get_data, true);
 
-        $get_data2 = callAPI2('GET', '169.254.168.183:3000/article/categorie/liste', false);
+        $get_data2 = callAPI2('GET', 'localhost:3000/article/categorie/liste', false);
         $response2 = json_decode($get_data2, true);
 
         if ($response["message"] == "Le tri par catégorie est effectif") {

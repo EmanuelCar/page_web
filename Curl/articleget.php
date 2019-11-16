@@ -2,7 +2,7 @@
 
 require 'configuration/curlconf2.php';
 
-$get_data = callAPI1('GET', '169.254.168.183:3000/article', false);
+$get_data = callAPI1('GET', 'localhost:3000/article', false);
 $response = json_decode($get_data, true);
 
 if ($response["message"] == "Récupération des articles réussi") {
@@ -22,7 +22,12 @@ echo '
 			<div class="card-body">
 				<h5>'.$noma.'</h5>
 				<p>'.$description.'</p>
-				<a href="#" class="btn btn-primary">Ajouter au panier</a>
+				<form action="./addPanier.php" method="POST">
+				<input hidden  type="text" name="article" value="'. $noma .'" >
+				quantité:
+				<input type="text" name="quantite" id="quantite" >
+				<button  class="btn btn-primary">Ajouter au panier</button>
+				</form>
 				<p>'.$prix.' €</p>
 			</div>
 		</article>
