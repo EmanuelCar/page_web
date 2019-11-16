@@ -67,10 +67,36 @@
 					</div> 
 			</div>
 
-			<div id="wrapper" style="min-height: 50px;">
+			<div id="wrapper" style="min-height: 50px;"></div>
 
-			</div>
 		</div>
+
+		<?php } else if($_COOKIE['statut'] == 'personnel') { ?>
+			<header>
+    			<h1><strong>Personnel CESI</strong></h1>
+			</header>
+			<div id="corps">
+				<div id="contenu">
+
+					<div id="wrapper" style="min-height: 50px;"></div>
+					<div id="barre_boutons_admin">
+						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+						Télécharger les photos </div></a>
+					</div>
+				</div>
+
+				<div id="contenu">
+					<div id="wrapper" style="min-height: 50px;"><h1> Signaler</h1></div>
+					<div id="barre_boutons_admin">
+							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							Signaler une photo </div></a>
+							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							Signaler un commentaire</div></a>
+							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							Signaler un évènement</div></a>
+						</div> 
+				</div>
+			</div>
 		<?php } else {?>
 			Vous n'êtes pas autorisé à accéder à ces éléments !
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

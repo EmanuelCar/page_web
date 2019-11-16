@@ -14,9 +14,9 @@
 
 <header>
   <!--Navbar-->
-  <?php if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel') {
+  <?php if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant') {
     include "./Navbar_log.php";
-  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre') {
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre' || $_COOKIE['statut'] == 'personnel') {
     include "./Navbar_admin_log.php";
   } else {
     include "./Navbar.php";
