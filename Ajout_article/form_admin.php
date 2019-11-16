@@ -29,15 +29,13 @@
 
             <div>
                 <label for="pass">Url de l'image :</label>
-                <input type="url" id="pass" name="url_img" minlength="8" required>
+                <input type="url" id="pass" name="url_img" required>
             </div>
             <br>
 
-            <select name="tri" id="tri" required>
-                <option value="" selected>Catégorie</option>
-            </select>
+            <?php include '../Curl/addarticle.php' ?>
 
-            <input type="submit" id='submit' value="Ajouter l'article">
+            <input type="submit" id='submit' name="submit" value="Ajouter l'article">
                 <img src="../img/logo_cesi.png" alt="cesi" height=200px>
         </form>
 
