@@ -60,13 +60,12 @@ if($_POST['submit']) {
         $response2 = json_decode($get_data2, true);
 
         if ($response["message"] == "Le tri par catégorie est effectif") {
-            $nbr = count($response2["catégories"]);
 
-            for($j = 0; $j<$nbr; $j++){
+            for($j = 0; $j<count($response2["catégories"]); $j++){
                 $categorieu = $response2["catégories"][$j]["Nom"];
-                echo'<h4>Nos '.$categorieu.' :</4>';
+                echo'<h4>Nos '.$categorieu.' :</h4>';
 
-                for($i = 0; $i<$nbr; $i++) {
+                for($i = 0; $i<count($response["articles"]); $i++) {
                     $noma = $response["articles"][$i]["Nom"];
                     $prix = $response["articles"][$i]["Prix"];
                     $description = $response["articles"][$i]["Description"];
