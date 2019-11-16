@@ -2,7 +2,7 @@
 
 require 'configuration/curlconf.php';
 
-$get_data = callAPI('GET', '169.254.168.183:3000/article/best', false);
+$get_data = callAPI('GET', 'localhost:3000/article/best', false);
 $response = json_decode($get_data, true);
 
 if ($response["message"] == "Affichage du meilleur article") {

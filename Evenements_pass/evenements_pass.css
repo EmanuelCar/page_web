@@ -32,6 +32,7 @@ button.btn.btn-primary{
 }
 
 .btn {
+    margin: auto;
     color: white;
     border-color: black;
 }
@@ -88,4 +89,12 @@ h1 {
 
 .Panier_btq {
     height: 30px;
+}
+
+button.btn.btn-primary {
+    margin-left: 17%;
+}
+
+button.btn.btn-secondary {
+    margin-left: 27% ;
 }
