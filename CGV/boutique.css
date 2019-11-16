@@ -128,6 +128,7 @@ footer{
 
 footer a{
 	color: #d0d0ce;
+	text-decoration: none !important;
 }
 
 header a{

@@ -49,7 +49,7 @@
           <a class="nav-link" href="./Evenements_act/evenements_act.php">Evènements actuels</a>
         </li>
       </ul>
-      <img src="./img/logo.png" alt="bde" width="170">
+      <img src="./img/logo.png" alt="bde" width="85%">
     </div>
     <!-- Content -->
     <div id="content">
@@ -88,5 +88,5 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="./assets/vendors/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/SiteWeb/cookiechoices.js"></script>
-<script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', '169.254.168.183');});</script>
+<script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'cookie.php');});</script>
 </html>
