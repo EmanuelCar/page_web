@@ -7,14 +7,20 @@
     <title> Votre Panier </title>
     <link rel="icon" href="../favicon.png">
 	<link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Panier.css">
+	<link rel="stylesheet" href="Panier.css">
+	<?php error_reporting(0); ?>
 </head>
 
 
 
 <header>
     <!--Navbar-->
-    <?php include "../Navbar.php" ?>
+    <?php if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "../Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "../Navbar_admin_log.php";
+  } else {
+    include "../Navbar.php";} ?>
 
     <!-- Bandeau -->
 	<img class="Bandeau" src="../img/boutique.png" alt="bandeau">
@@ -22,7 +28,7 @@
 
 <body>
 <section>
-<div class="container-fluid mx-0 pl-4">
+<div class="container-fluid">
 			<div class="row ox-image ox-align-center ox-margin-bottom-medium">
 
 

@@ -14,14 +14,12 @@
 
 <header>
 	<!--Navbar-->
-  <?php 
-  if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+  <?php   if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
     include "./Navbar_log.php";
   } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
     include "./Navbar_admin_log.php";
   } else {
-    include "./Navbar.php";} 
-  ?>
+    include "./Navbar.php";} ?>
 </header>
 
 <body>

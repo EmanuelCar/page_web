@@ -9,12 +9,18 @@
 	<link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="./boutique.css">
+	<?php error_reporting(0); ?>
 </head>
 
 
 <header>
 	<!--Navbar-->
-	<?php include "../Navbar.php" ?>
+	<?php if($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'etudiant' || $_COOKIE['statut'] == 'personnel'){
+    include "../Navbar_log.php";
+  } else if ($_COOKIE['connecté'] == 1 && $_COOKIE['statut'] == 'membre'){
+    include "../Navbar_admin_log.php";
+  } else {
+    include "../Navbar.php";} ?>
 </header>
 
 <body>
