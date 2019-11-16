@@ -37,16 +37,7 @@
 				<!-- Fin séparateur -->
 
 
-				<div class="col-lg-5 col-xs-12 col-md-4 p-2 bloc my-2">
-					<article class="card">
-						<img src="../img/sweat3.png" class="objet">
-						<div class="card-body">
-							<h5>Nom Produit</h5>
-							<p class="qqté" style="font-weight:bold"> Quantité :</p> <p class="nbreArticle" style="display:inline">19</p>
-						</div>
-					</article>
-				</div>
-
+			
 				<?php include 'Paniersend.php'; ?>
 
 				<!-- Séparateur -->

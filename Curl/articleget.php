@@ -22,7 +22,12 @@ echo '
 			<div class="card-body">
 				<h5>'.$noma.'</h5>
 				<p>'.$description.'</p>
-				<a href="#" class="btn btn-primary">Ajouter au panier</a>
+				<form action="./addPanier.php" method="POST">
+				<input hidden  type="text" name="article" value="'. $noma .'" >
+				quantité:
+				<input type="text" name="quantite" id="quantite" >
+				<button  class="btn btn-primary">Ajouter au panier</button>
+				</form>
 				<p>'.$prix.' €</p>
 			</div>
 		</article>
