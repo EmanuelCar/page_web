@@ -3,7 +3,7 @@
 require 'configuration/curlconf.php';
 require 'configuration/curlconf2.php';
 
-$get_data = callAPI('GET', '169.254.168.183:3000/article/categorie/liste', false);
+$get_data = callAPI('GET', 'localhost:3000/article/categorie/liste', false);
 $response = json_decode($get_data, true);
 $nbr = count($response["catégories"]);
 $i = 0;
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
         "cat" => $cat
     );
 
-    $make_call = callAPI('POST','169.254.168.183:3000/article/add',json_encode($data_array));
+    $make_call = callAPI('POST','localhost:3000/article/add',json_encode($data_array));
     $response = json_decode($make_call,true);
 
     if ($response["message"] ==  "Ajout de l'article ".$nom.""){

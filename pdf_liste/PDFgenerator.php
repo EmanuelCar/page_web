@@ -1,32 +1,24 @@
-<?php
-
-
+<?php 
 
 require("../assets/vendors/fpdf181/fpdf.php");
 
-$event = !empty($_POST['event']) ? trim($_POST['event']) : null;
-
-
-$data_array = array(
-    "event" => $event,
-);
-
-$make_call = callAPI2('POST', 'http://localhost:3000/photo/add', json_encode($data_array));
-$response = json_decode($make_call, true);
+require('../CURL/configuration/curlconf.php');
+ 
 
 class PDF extends FPDF
 {
 // En-tête
 function Header()
 {
-    $event = !empty($_POST['event']) ? trim($_POST['event']) : null;
+    
+    $event = $_POST['recup'];
+   
     // Logo
     // Police Arial gras 15
     $this->SetFont('Arial','B',15);
     // Décalage à droite
-    $this->Cell(80);
     // Titre
-    $this->Cell(30,10,utf8_decode("Liste des participant à l'évènement: ").$event,1,0,'C');
+    $this->Cell(0,10,utf8_decode("Liste des participant à l'évènement: ").$event,1,0,'C');
     // Saut de ligne
     $this->Ln(20);
 }
@@ -43,12 +35,24 @@ function Footer()
 }
 }
 
+
+
 // Instanciation de la classe dérivée
+$event = !empty($_POST['recup']) ? trim($_POST['recup']) : null;
+$data_array = array(
+    "event" => $event,
+);
+
+$make_call = callAPI('POST', 'localhost:3000/event/participant', json_encode($data_array));
+$response = json_decode($make_call, true);
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
-for($i=1;$i<=40;$i++)
-$pdf->Cell(0,10,utf8_decode('Impression de la ligne numéro ').$i,0,1);
+for($i=0;$i<count($response["participants"]);$i++){
+$nom = $response["participants"][$i]["Nom"];
+$prenom = $response["participants"][$i]["Prenom"];
+$pdf->Cell(0,10,$nom." ".$prenom,0,1);
+}
 $pdf->Output();
 ?>

@@ -52,7 +52,7 @@
 						Ajouter un évènement </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Rendre invisible un évènement</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+						<a href="../pdf_liste/liste.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Liste des inscrits (par évènement)</div></a>
 					</div> 
 			</div>
