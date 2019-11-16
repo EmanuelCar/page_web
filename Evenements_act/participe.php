@@ -2,7 +2,7 @@
 
 
 
-require '../assets/Vendors/Curl/curlconf2.php';;
+require '../Curl/configuration/curlconf.php';
 
 
 
@@ -14,18 +14,18 @@ $data_array = array(
     "event" => $event,
 );
 
-$make_call = callAPI2('POST', 'http://localhost:3000/event/join', json_encode($data_array));
+$make_call = callAPI('POST', '10.154.128.76/event/join', json_encode($data_array));
 $response = json_decode($make_call, true);
 
 
-if ($response["message"] == "Super like") {
+if ($response["message"] == "tu es bien inscrit") {
 
     header('Location: Evenements_act.php');
     exit();
-} else if ($response["message"] == "Super unlike") {
-    header('Location: Evenements_act.php');
+} else if ($response["message"] ==  "tu es déjà inscrit à cet évènement !") {
+    header('Location: evenements_act.php');
     exit();
 } else {
-    header('Location: Evenements_act.php');
+    header('Location: evenements_act.php');
     exit();
 }

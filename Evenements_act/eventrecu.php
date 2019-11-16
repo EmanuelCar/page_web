@@ -1,9 +1,9 @@
 <?php
 
 
-require '../assets/Vendors/Curl/curlconf.php';
+require '../Curl/configuration/curlconf.php';
 
-$get_data = callAPI('GET', '10.154.128.76:3000/event/actuel', false);
+$get_data = callAPI('GET', 'localhost:3000/event/actuel', false);
 $response = json_decode($get_data, true);
 
 
@@ -30,8 +30,11 @@ if ($response["message"] == "Liste des évènements actuels") {
         <p>' . $description . '</p>
         <div class="w3-row">
             <div class="w3-col m8 s12">
-                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Inscription</b></button></p>
-            </div>
+            <form action="./participe.php" method="POST">
+            <input hidden  type="text" name="event" value="' . $nom . '">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>s\'inscrire</b></button></p>
+                </form>
+                </div>
         </div>
     </div>
 </div>

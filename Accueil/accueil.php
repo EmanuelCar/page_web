@@ -29,7 +29,7 @@
       <ul class="nav">
 
         <li>
-          <a class="nav-link" href="‪../../../Evenements_pass/evenements_pass.php">Evènements passés</a>
+          <a class="nav-link" href="‪../Evenements_pass/evenements_pass.php">Evènements passés</a>
         </li>
 
         <li>

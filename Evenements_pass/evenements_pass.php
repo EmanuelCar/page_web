@@ -29,8 +29,10 @@
   <h1>Nos plus gros succès !!</h1>
   <br />
 
+  <?php include './eventpastrecu.php' ?>
+
   <div class="card">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
 
       </ol>
@@ -45,7 +47,12 @@
           <img class="caroussel_img carouf" src="../img/IMG_3669.jpg" height="300px" width="100%" alt="Second slide">
           <br />
           <br />
-          <a href="#" class="btn btn-primary">J'aime cette photo</a>
+      <a href="#" class="btn btn-primary">J'aime cette photo</a>
+       <p class="card-text">Les étudiants en première année ont eu le droit à leur première journée d'intégration spécial "CESI" ! </p>
+      <h5 class="card-title">Journée d'intégration</h5>
+      <p class="card-text">Les étudiants en première année ont eu le droit à leur première journée d'intégration spécial "CESI" ! </p>
+      <h5 class="card-title">Journée d'intégration</h5>
+      <p class="card-text">Les étudiants en première année ont eu le droit à leur première journée d'intégration spécial "CESI" ! </p>
         </div>
         <div class="carousel-item">
           <img class="caroussel_img carouf" src="../img/IMG_3715.jpg" height="300px" width="100%" alt="Third slide">
@@ -55,11 +62,11 @@
 
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -71,12 +78,11 @@
       <a href="#" class="btn btn-primary">Ajouter une photo</a>
     </div>
   </div>
-  </div>
 
   <br />
   <div class="card">
     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators2">
+      <ol class="carousel-indicators">
 
       </ol>
       <div class="carousel-inner">
