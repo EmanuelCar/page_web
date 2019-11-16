@@ -74,7 +74,7 @@ if ($response["message"] == "Liste des évènements passés") {
       <div class="card-body">
         <h5 class="card-title">' . $nom . '</h5>
         <p class="card-text">' . $description . '</p>
-        <a href="#" class="btn btn-primary">Ajouter une photo</a>
+        <a href="../Ajout_photo/form_admin.php" class="btn btn-primary">Ajouter une photo</a>
       </div>
     </div>
     <br />';

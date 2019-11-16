@@ -32,9 +32,9 @@
                 <div id="barre_boutons_admin">
                     <a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
                     Ajouter un article </div></a>
-                    <a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+                    <a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
                     Supprimer un article</div></a>
-                    <a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+                    <a href="../Ajout_categorie/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 					Ajouter une catégorie </div></a>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 			<div id="contenu">
 				<div id="wrapper" style="min-height: 50px;"><h1> Évènement</h1></div>
 				<div id="barre_boutons_admin">
-						<a href="../Ajout_article/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
+						<a href="../Ajout_event/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Ajouter un évènement </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Rendre invisible</div></a>

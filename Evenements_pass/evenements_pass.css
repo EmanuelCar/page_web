@@ -27,6 +27,10 @@ a:link {
     border-color: black;
 }
 
+button.btn.btn-primary{
+    margin-left: 17%;
+}
+
 .btn {
     color: white;
     border-color: black;
