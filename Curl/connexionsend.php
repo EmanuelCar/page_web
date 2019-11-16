@@ -12,11 +12,7 @@ if (isset($_POST['submit'])) {
         "password" => $password,
     );
 
-<<<<<<< HEAD
     $make_call = callAPI('POST', 'localhost:3000/user/connection', json_encode($data_array));
-=======
-    $make_call = callAPI('POST', '169.254.168.183:3000/user/connection', json_encode($data_array));
->>>>>>> 2b62419952fa8263937c48d78a51dffdcf859182
     $response = json_decode($make_call, true);
 
     if ($response["message"] == "Vous êtes bien connecté !") {

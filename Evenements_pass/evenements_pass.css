@@ -28,6 +28,7 @@ a:link {
 }
 
 .btn {
+    margin: auto;
     color: white;
     border-color: black;
 }
@@ -84,4 +85,8 @@ h1 {
 
 .Panier_btq {
     height: 30px;
+}
+
+button.btn.btn-primary{
+    margin-left: 17% ;
 }

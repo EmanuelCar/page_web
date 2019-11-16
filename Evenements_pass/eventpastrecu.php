@@ -36,7 +36,9 @@ if ($response["message"] == "Liste des évènements passés") {
 
       if ($parent == $nom) {
         echo '<div class="carousel-item">
-        <img class="caroussel_img carouf" src="' . URL . '" height="300px" width="100%" alt="Second slide">
+        <img class="caroussel_img carouf" src="' . $URL . '" height="300px" width="100%" alt="Second slide">
+        <br />
+        <br />
                 <form action="./liker.php" method="POST">
                 <input hidden  type="text" name="photo" value="' . $URL . '">
                 <button  class="btn btn-primary">aime cette photo</button>
