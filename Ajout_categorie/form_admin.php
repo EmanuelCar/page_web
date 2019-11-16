@@ -13,20 +13,16 @@
 
     <div id="container">
         <form action="#" method="POST">
-            <h2>Ajout de catégories</h2>
+            <h2>Ajout de la catégorie</h2>
             <br>
-            Nom de la catégorie : <input name="nom" size=auto required>
+            Nom de la catégorie : <input name="nom" required>
             <P>
-
-
-            <input type="submit" id='submit' value="Ajouter l'article">
+            <input type="submit" name="submit" value="Ajouter la catégorie">
                 <img src="../img/logo_cesi.png" alt="cesi" height=200px>
         </form>
-
+        <?php include '../Curl/addcategorie.php' ?>
     </div>
 
 </body>
-<script src="C:\Users\hp\Desktop\Projet WEB\Site web\assets\Vendors\bootstrap\js\jquery.js"></script>
-<script src="C:\Users\hp\Desktop\Projet WEB\Site web\assets\Vendors\bootstrap\js\bootstrap.min.js"></script>
 
 </html>

@@ -23,7 +23,7 @@
         Votre nom : <input type="text" name="nom" required>
         <P>
           <br>
-          Votre adresse mail : <input type="text" name="email" id="email" required>
+          Votre adresse mail : <input type="email" name="email" id="email" required>
           <p id="tst"> <?php if($response["message"] == "Un compte avec cette adresse existe déjà !") {echo $response["message"];} ?> <p>
           <P>
             <br>
