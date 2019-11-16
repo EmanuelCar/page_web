@@ -37,11 +37,10 @@ if (isset($_POST['submit'])) {
     $make_call = callAPI('POST','169.254.168.183:3000/article/add',json_encode($data_array));
     $response = json_decode($make_call,true);
 
-    $yes = $response["message"];
-    if ($yes ==  "Ajout de l'article ".$nom.""){
+    if ($response["message"] ==  "Ajout de l'article ".$nom.""){
         header('Location: /SiteWeb/Boutique/boutique.php');
     } else {
-        echo "Une erreur s'est produite";
+        echo $response["message"];
     }
 }
 
