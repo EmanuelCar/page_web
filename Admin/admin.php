@@ -45,9 +45,7 @@
 						<a href="../Ajout_event/form_admin.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Ajouter un évènement </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre invisible</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible</div></a>
+						Rendre invisible un évènement</div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Liste des inscrits (par évènement)</div></a>
 					</div> 
@@ -60,10 +58,6 @@
 						Rendre invisible une photo </div></a>
 						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
 						Rendre invisible un commentaire</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible une photo</div></a>
-						<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
-						Rendre visible un commentaire</div></a>
 					</div> 
 			</div>
 
