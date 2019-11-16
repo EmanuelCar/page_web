@@ -39,16 +39,20 @@ if ($response["message"] == "Liste des évènements passés") {
     for ($j = 0; $j < count($response["photo"]); $j++) {
       $URL = $response["photo"][$j]["URL"];
       $parent = $response["photo"][$j]["évènement"];
-      $like = $nombre["like"][$j]["nombre"];
-      $image = $nombre["like"][$j]["URL"];
 
       if ($parent == $nom) {
         echo '<div class="carousel-item">
         <img class="caroussel_img carouf" src="' . $URL . '" height="300px" width="100%" alt="Second slide">';
-        if ($image == $URL) {
-          echo '<p class="card-text">' . $like . '</p>';
-        } else {
-          echo '<p class="card-text">0</p>';
+        for ($l = 0; $l < count($response["photo"]); $l++) {
+          $like = $nombre["like"][$l]["nombre"];
+          $image = $nombre["like"][$l]["URL"];
+
+          if ($like == null) {
+            $like = 0;
+          }
+          if ($image == $URL) {
+            echo '<p class="card-text">' . $like . '</p>';
+          }
         }
         echo ' <br />
         <br />
