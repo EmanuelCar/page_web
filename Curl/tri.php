@@ -3,56 +3,60 @@
 require 'configuration/curlconf3.php';
 $choix = 0;
 
-if($_POST['submit']) {
+if ($_POST['submit']) {
 
     $choix = !empty($_POST['tri']) ? trim($_POST['tri']) : null;
 
-    if($choix == 2) {
+    if ($choix == 2) {
         $get_data = callAPI('GET', 'localhost:3000/article/tri/prix', false);
         $response = json_decode($get_data, true);
 
         if ($response["message"] == "Le tri par prix est effectif") {
             $nbr = count($response["articles"]);
 
-        echo '<section>
+            echo '<section>
         <div class="container-fluid mx-0 pl-4">
             <div class="row ox-image ox-align-center ox-margin-bottom-medium">
                 <div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2">
                     <p style="text-align: right; font-size:x-large"> Nos Articles disponibles </p>
                 </div>';
 
-            for($i = 0; $i<$nbr; $i++) {
+            for ($i = 0; $i < $nbr; $i++) {
                 $noma = $response["articles"][$i]["Nom"];
                 $prix = $response["articles"][$i]["Prix"];
                 $description = $response["articles"][$i]["Description"];
                 $categorie = $response["articles"][$i]["Categorie"];
                 $urla = $response["articles"][$i]["URL"];
-            
-        echo '
+
+                echo '
         <div class="col-lg-2 col-xs-12 col-md-4 p-2 bloc my-2">
                 <article class="card">
-                    <img src="'.$urla.'" class="objet">
+                    <img src="' . $urla . '" class="objet">
                     <div class="card-body">
-                        <h5>'.$noma.'</h5>
-                        <p>'.$description.'</p>
-                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                        <p>'.$prix.' €</p>
+                        <h5>' . $noma . '</h5>
+                        <p>' . $description . '</p>
+                        <form action="./addPanier.php" method="POST">
+                        <input hidden  type="text" name="article" value="' . $noma . '" >
+                        quantité:
+                        <input type="number" min="1" name="quantite" id="quantite" >
+                        <button  class="btn btn-primary">Ajouter au panier</button>
+                        </form>
+                        <p>' . $prix . ' €</p>
                     </div>
                 </article>
             </div>
         <div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2"> </div>
         ';
-            } 
-        
-        echo '</div>
+            }
+
+            echo '</div>
             </div>
         </section>
         ';
         } else {
             echo $response["message"];
         }
-
-    } else if($choix == 3) {
+    } else if ($choix == 3) {
         $get_data = callAPI('GET', 'localhost:3000/article/tri/categorie', false);
         $response = json_decode($get_data, true);
 
@@ -61,9 +65,9 @@ if($_POST['submit']) {
 
         if ($response["message"] == "Le tri par catégorie est effectif") {
 
-            for($j = 0; $j<count($response2["catégories"]); $j++){
+            for ($j = 0; $j < count($response2["catégories"]); $j++) {
                 $categorieu = $response2["catégories"][$j]["Nom"];
-                echo'<h4>Nos '.$categorieu.' :</h4>';
+                echo '<h4>Nos ' . $categorieu . ' :</h4>';
 
                 echo '<section>
                 <div class="container-fluid mx-0 pl-4">
@@ -71,25 +75,29 @@ if($_POST['submit']) {
                         <div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2">
                             <p style="text-align: right; font-size:x-large"> Nos Articles disponibles </p>
                         </div>';
-                        
-                for($i = 0; $i<count($response["articles"]); $i++) {
+
+                for ($i = 0; $i < count($response["articles"]); $i++) {
                     $noma = $response["articles"][$i]["Nom"];
                     $prix = $response["articles"][$i]["Prix"];
                     $description = $response["articles"][$i]["Description"];
                     $urla = $response["articles"][$i]["URL"];
                     $categoriea = $response["articles"][$i]["Categorie"];
 
-                    if($categoriea == $categorieu)
-                    {
+                    if ($categoriea == $categorieu) {
                         echo '
                         <div class="col-lg-2 col-xs-12 col-md-4 p-2 bloc my-2">
                                 <article class="card">
-                                    <img src="'.$urla.'" class="objet">
+                                    <img src="' . $urla . '" class="objet">
                                     <div class="card-body">
-                                        <h5>'.$noma.'</h5>
-                                        <p>'.$description.'</p>
-                                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                                        <p>'.$prix.' €</p>
+                                        <h5>' . $noma . '</h5>
+                                        <p>' . $description . '</p>
+                                        <form action="./addPanier.php" method="POST">
+			                            	<input hidden  type="text" name="article" value="' . $noma . '" >
+			                            	quantité:
+			                            	<input type="number" min="1" name="quantite" id="quantite" >
+			                            	<button  class="btn btn-primary">Ajouter au panier</button>
+			                            	</form>
+                                        <p>' . $prix . ' €</p>
                                     </div>
                                 </article>
                             </div>
@@ -101,16 +109,15 @@ if($_POST['submit']) {
                 </div>
             </section>
             ';
-            } 
+            }
         } else {
             echo $response["message"];
         }
-    } else if($choix == 1){
+    } else if ($choix == 1) {
         include "Articles.php";
     }
 }
 
-if($choix == 0) {
+if ($choix == 0) {
     include "Articles.php";
 }
-?>
