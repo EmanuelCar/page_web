@@ -26,6 +26,7 @@
 <body>
 	<!-- Caroussel -->
 	<?php include "../Curl/best3.php"?>
+	<br><br><br><br><br><br><br><br>
 	<form method="POST">
 		<select name="tri" id="tri" required>
 			<option value="">Tri</option>

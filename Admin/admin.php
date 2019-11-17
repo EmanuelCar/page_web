@@ -92,11 +92,11 @@
 				<div id="contenu">
 					<div id="wrapper" style="min-height: 50px;"><h1> Signaler</h1></div>
 					<div id="barre_boutons_admin">
-							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							<a href="../Signaler/signalphoto.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 							Signaler une photo </div></a>
-							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							<a href="../Signaler/signalcom.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 							Signaler un commentaire</div></a>
-							<a href="#"><div class="bouton_admin"> <div style="height:50px;"></div>
+							<a href="../Signaler/signalevent.php"><div class="bouton_admin"> <div style="height:50px;"></div>
 							Signaler un évènement</div></a>
 						</div> 
 				</div>
