@@ -26,46 +26,47 @@
 
 <body>
   <br><br>
-  <h4>Liste des commentaires actuellement visible : </h4>
+  <h4>Liste des évènements actuellement visible : </h4>
   <br>
   <?php
   require '../Curl/configuration/curlconf.php';
   require '../Curl/configuration/curlconf2.php';
 
-  $get_data = callAPI('GET', 'localhost:3000/comment/liste', false);
+  $get_data = callAPI('GET', 'localhost:3000/event/liste', false);
   $response = json_decode($get_data, true);
 
-  $get_data2 = callAPI1('GET', 'localhost:3000/event/liste', false);
-  $response2 = json_decode($get_data2, true);
+  if ($response["message"] == "Liste des évènements") {
+    for ($j = 0; $j < count($response["évènements"]); $j++) {
+      $event = $response["évènements"][$j]["Nom"];
+      $img = $response["évènements"][$j]["Url"];
 
-  if ($response2["message"] == "Liste des évènements") {
-    for ($j = 0; $j < count($response2["évènements"]); $j++) {
-      $eventu = $response2["évènements"][$j]["Nom"];
-      echo "<h4>Commentaire sur l'évènement : " . $eventu . " :</h4>";
-      for ($i = 0; $i < count($response['photos']); $i++) {
-        $nom = $response['photos'][$i]['Nom'];
-        $prenom = $response['photos'][$i]['Prenom'];
-        $com = $response['photos'][$i]['Commentaire'];
-        $event = $response['photos'][$i]['Évènement'];
-        $img = $response['photos'][$i]['URL'];
-        if ($event == $eventu) {
-          echo '
-                    <img src="' . $img . '" style="width: 400px;">
-                    <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
-                    <p>' . $com . '</p>
-                    <form method="POST">
-                        <input type="hidden" name="commentaire" value="' . $com . '"></input>
-                        <input type="submit" name="submit" value="Signaler"></input>
-                    </form>
-                    <br><br>';
-      }
+      echo "<h4>Nom de l'évènement : " . $event . " :</h4>";
+      echo '
+            <img src="' . $img . '" style="width: 400px;">
+            <form method="POST">
+                <input type="hidden" name="event" value="' . $event . '"></input>
+                <input type="submit" name="submit" value="Rendre invisible"></input>
+            </form>
+            <br><br>';
+      
     }
     if (isset($_POST['submit'])) {
-      $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
-      echo '' . $com . '';
+      $nom = !empty($_POST['event']) ? trim($_POST['event']) : null;
+
+        $data_array = array(
+          "event" => $nom,
+      );
+
+      $get_data2 = callAPI1('POST', 'localhost:3000/invisible/event', json_encode($data_array));
+      $response2 = json_decode($get_data2, true);
+
+      if ($response2["message"] ==  "L'évènement " . $nom . " est désormais invisible au public !"){
+        header('Location: /SiteWeb/Evenements_act/evenements_act.php');
+      } else {
+          echo $response2["message"];
+      }
     }
   }
-}
   ?>
 </body>
 

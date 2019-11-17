@@ -9,8 +9,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="../Admin/boutique.css">
   <title>BDE Cesi Nancy</title> <!-- Titre du site web -->
-  <?php //error_reporting(0); 
-  ?>
+  <?php //error_reporting(0); ?>
 </head>
 
 <header>
@@ -25,47 +24,42 @@
 </header>
 
 <body>
-  <br><br>
-  <h4>Liste des commentaires actuellement visible : </h4>
+    <br><br>
+  <h4>Liste des photos actuellement visible : </h4>
   <br>
-  <?php
+  <?php 
   require '../Curl/configuration/curlconf.php';
   require '../Curl/configuration/curlconf2.php';
 
-  $get_data = callAPI('GET', 'localhost:3000/comment/liste', false);
+  $get_data = callAPI('GET', 'localhost:3000/photo/liste', false);
   $response = json_decode($get_data, true);
 
-  $get_data2 = callAPI1('GET', 'localhost:3000/event/liste', false);
-  $response2 = json_decode($get_data2, true);
-
-  if ($response2["message"] == "Liste des évènements") {
-    for ($j = 0; $j < count($response2["évènements"]); $j++) {
-      $eventu = $response2["évènements"][$j]["Nom"];
-      echo "<h4>Commentaire sur l'évènement : " . $eventu . " :</h4>";
-      for ($i = 0; $i < count($response['photos']); $i++) {
-        $nom = $response['photos'][$i]['Nom'];
-        $prenom = $response['photos'][$i]['Prenom'];
-        $com = $response['photos'][$i]['Commentaire'];
-        $event = $response['photos'][$i]['Évènement'];
-        $img = $response['photos'][$i]['URL'];
-        if ($event == $eventu) {
-          echo '
-                    <img src="' . $img . '" style="width: 400px;">
-                    <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
-                    <p>' . $com . '</p>
-                    <form method="POST">
-                        <input type="hidden" name="commentaire" value="' . $com . '"></input>
-                        <input type="submit" name="submit" value="Signaler"></input>
-                    </form>
-                    <br><br>';
-      }
+  for($i = 0; $i<count($response['photos']); $i++){
+    $img = $response['photos'][$i]['URL'];
+      echo '
+        <img src="'.$img.'" style="width: 400px;">
+        <form method="POST">
+            <input type="hidden" name="photo" value="'.$img.'"></input>
+            <input type="submit" name="submit" value="Rendre invisible"></input>
+        </form>
+        <br><br>';
     }
     if (isset($_POST['submit'])) {
-      $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
-      echo '' . $com . '';
+        $img = !empty($_POST['photo']) ? trim($_POST['photo']) : null;
+
+        $data_array = array(
+          "URL" => $img,
+      );
+
+      $get_data2 = callAPI1('POST', 'localhost:3000/invisible/photo', json_encode($data_array));
+      $response2 = json_decode($get_data2, true);
+
+      if ($response2["message"] ==  "L'image : " . $img . " est désormais invisible au public !"){
+        header('Location: /SiteWeb/Evenements_pass/evenements_pass.php');
+      } else {
+          echo $response2["message"];
+      }
     }
-  }
-}
   ?>
 </body>
 

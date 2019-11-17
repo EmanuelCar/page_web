@@ -31,6 +31,7 @@
   <?php
   require '../Curl/configuration/curlconf.php';
   require '../Curl/configuration/curlconf2.php';
+  require '../Curl/configuration/curlconf3.php';
 
   $get_data = callAPI('GET', 'localhost:3000/comment/liste', false);
   $response = json_decode($get_data, true);
@@ -50,22 +51,34 @@
         $img = $response['photos'][$i]['URL'];
         if ($event == $eventu) {
           echo '
-                    <img src="' . $img . '" style="width: 400px;">
-                    <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
-                    <p>' . $com . '</p>
-                    <form method="POST">
-                        <input type="hidden" name="commentaire" value="' . $com . '"></input>
-                        <input type="submit" name="submit" value="Signaler"></input>
-                    </form>
-                    <br><br>';
+                <img src="' . $img . '" style="width: 400px;">
+                <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
+                <p>' . $com . '</p>
+                <form method="POST">
+                    <input type="hidden" name="commentaire" value="' . $com . '"></input>
+                    <input type="submit" name="submit" value="Rendre invisible"></input>
+                </form>
+                <br><br>';
+        }
+      }
+      if (isset($_POST['submit'])) {
+        $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
+        echo '' . $com . '';
+        $data_array = array(
+          "commentaire" => $com,
+        );
+
+        $get_data3 = callAPI2('POST', 'localhost:3000/invisible/comment', json_encode($data_array));
+        $response3 = json_decode($get_data3, true);
+
+        if ($response3["message"] ==  "Le commentaire " . $com . " est désormais invisible au public !") {
+          header('Location: /SiteWeb/Evenements_pass/evenements_pass.php');
+        } else {
+          echo $response3["message"];
+        }
       }
     }
-    if (isset($_POST['submit'])) {
-      $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
-      echo '' . $com . '';
-    }
   }
-}
   ?>
 </body>
 

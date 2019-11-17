@@ -14,7 +14,7 @@
 <body>
 
     <div id="container">
-        <form action="PDFgenerator" method="POST">
+        <form action="PDFgenerator.php" method="POST">
             <h2>participant à un évènement</h2>
             <br>
             
