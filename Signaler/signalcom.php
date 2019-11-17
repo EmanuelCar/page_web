@@ -29,6 +29,7 @@
   <h4>Liste des commentaires actuellement visible : </h4>
   <br>
   <?php
+  require '../mail.php';
   require '../Curl/configuration/curlconf.php';
   require '../Curl/configuration/curlconf2.php';
 
@@ -54,15 +55,24 @@
                     <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
                     <p>' . $com . '</p>
                     <form method="POST">
+                        <input type="hidden" name="event" value="' . $event . '"></input>
+                        <input type="hidden" name="prenom" value="' . $prenom . '"></input>
+                        <input type="hidden" name="nom" value="' . $nom . '"></input>
                         <input type="hidden" name="commentaire" value="' . $com . '"></input>
                         <input type="submit" name="submit" value="Signaler"></input>
                     </form>
                     <br><br>';
       }
     }
-    if (isset($_POST['submit'])) {
-      $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
-      echo '' . $com . '';
+  }
+  if (isset($_POST['submit'])) {
+    $com = !empty($_POST['commentaire']) ? trim($_POST['commentaire']) : null;
+    $nom = !empty($_POST['nom']) ? trim($_POST['nom']) : null;
+    $prenom = !empty($_POST['prenom']) ? trim($_POST['prenom']) : null;
+    $event = !empty($_POST['event']) ? trim($_POST['event']) : null;
+    $result = smtpmailer('bdefakecesi@gmail.com', 'bdefakecesi@gmail.com', 'BDE personel', 'Signalement de commentaire', 'Nous avons remarqué que le commentaire : "' . $com . '" de ' . $prenom . ' ' . $nom . ' pour l\'évènement : ' . $event . ' n\'est pas approprié. Merci de bien vouloir le faire disparaitre.');
+    if (true !== $result) {
+      echo $result;
     }
   }
 }

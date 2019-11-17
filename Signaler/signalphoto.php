@@ -28,6 +28,7 @@
   <h4>Liste des photos actuellement visible : </h4>
   <br>
   <?php 
+  require '../mail.php';
   require '../Curl/configuration/curlconf.php';
 
   $get_data = callAPI('GET', 'localhost:3000/photo/liste', false);
@@ -45,7 +46,10 @@
     }
     if (isset($_POST['submit'])) {
         $img = !empty($_POST['photo']) ? trim($_POST['photo']) : null;
-        echo ''.$img.'';
+        $result = smtpmailer('bdefakecesi@gmail.com', 'bdefakecesi@gmail.com', 'BDE personel', utf8_decode('Photo inapproprié'), 'Nous avons constaté que la photo '.$img.' n\'est pas approprié au sein de l\'établissement. Merci de bien vouloir le faire disparaitre. :)');
+        if (true !== $result) {
+          echo $result;
+        }
     }
   ?>
 </body>

@@ -9,7 +9,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="../Admin/boutique.css">
   <title>BDE Cesi Nancy</title> <!-- Titre du site web -->
-  <?php //error_reporting(0); ?>
+  <?php //error_reporting(0); 
+  ?>
 </head>
 
 <header>
@@ -24,35 +25,39 @@
 </header>
 
 <body>
-    <br><br>
+  <br><br>
   <h4>Liste des évènements actuellement visible : </h4>
   <br>
-  <?php 
+  <?php
+  require '../mail.php';
   require '../Curl/configuration/curlconf.php';
 
   $get_data = callAPI('GET', 'localhost:3000/event/liste', false);
   $response = json_decode($get_data, true);
 
-if ($response["message"] == "Liste des évènements") {
-    for($j = 0; $j<count($response["évènements"]); $j++){
-        $event = $response["évènements"][$j]["Nom"];
-        $img = $response["évènements"][$j]["Url"];
+  if ($response["message"] == "Liste des évènements") {
+    for ($j = 0; $j < count($response["évènements"]); $j++) {
+      $event = $response["évènements"][$j]["Nom"];
+      $img = $response["évènements"][$j]["Url"];
 
-        echo '
-            <h5>Nom de l\'évènement : '.$event.'</h5>
-            <img src="'.$img.'" style="width: 400px;">
+      echo '
+            <h5>Nom de l\'évènement : ' . $event . '</h5>
+            <img src="' . $img . '" style="width: 400px;">
             <form method="POST">
-                <input type="hidden" name="event" value="'.$event.'"></input>
+                <input type="hidden" name="event" value="' . $event . '"></input>
                 <input type="submit" name="submit" value="Signaler"></input>
             </form>
             <br><br>';
-        }
     }
-    
-    if (isset($_POST['submit'])) {
-        $event = !empty($_POST['event']) ? trim($_POST['event']) : null;
-        echo ''.$event.'';
+  }
+
+  if (isset($_POST['submit'])) {
+    $event = !empty($_POST['event']) ? trim($_POST['event']) : null;
+    $result = smtpmailer('bdefakecesi@gmail.com', 'bdefakecesi@gmail.com', 'BDE personel', utf8_decode('évènement inapproprié'), 'Nous avons constaté que l\'évènement : "' . $event . '" n\'est pas approprié au sein de l\'établissement. Merci de bien vouloir le faire disparaitre. :)');
+    if (true !== $result) {
+      echo $result;
     }
+  }
   ?>
 </body>
 
