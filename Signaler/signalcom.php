@@ -51,17 +51,17 @@
         $img = $response['photos'][$i]['URL'];
         if ($event == $eventu) {
           echo '
-                    <img src="' . $img . '" style="width: 400px;">
-                    <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
-                    <p>' . $com . '</p>
-                    <form method="POST">
-                        <input type="hidden" name="event" value="' . $event . '"></input>
-                        <input type="hidden" name="prenom" value="' . $prenom . '"></input>
-                        <input type="hidden" name="nom" value="' . $nom . '"></input>
-                        <input type="hidden" name="commentaire" value="' . $com . '"></input>
-                        <input type="submit" name="submit" value="Signaler"></input>
-                    </form>
-                    <br><br>';
+                <img src="' . $img . '" style="width: 400px;">
+                <h5>' . $prenom . ' ' . $nom . ' a commenté :</h5>
+                <p>' . $com . '</p>
+                <form method="POST">
+                    <input type="hidden" name="event" value="' . $event . '"></input>
+                    <input type="hidden" name="prenom" value="' . $prenom . '"></input>
+                    <input type="hidden" name="nom" value="' . $nom . '"></input>
+                    <input type="hidden" name="commentaire" value="' . $com . '"></input>
+                    <input type="submit" name="submit" value="Signaler"></input>
+                </form>
+                <br><br>';
       }
     }
   }
