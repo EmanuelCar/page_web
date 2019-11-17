@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         "datef" => $fe
     );
     
-    $make_data = callAPI('POST', '169.254.168.183:3000/event/add', json_encode($data_array));
+    $make_data = callAPI('POST', 'localhost:3000/event/add', json_encode($data_array));
     $response = json_decode($make_data, true);
 
     if ($response["message"] == "Ajout de l'evenement ".$nom."") {

@@ -9,7 +9,6 @@ $response = json_decode($get_data, true);
 $make_calls = callAPI1('GET', 'http://localhost:3000/comment/liste', false);
 $respont = json_decode($make_calls, true);
 
-
 $make = callAPI2('GET', 'http://localhost:3000/photo/like/', false);
 $nombre = json_decode($make, true);
 
@@ -43,7 +42,7 @@ if ($response["message"] == "Liste des évènements passés") {
       if ($parent == $nom) {
         echo '<div class="carousel-item">
         <img class="caroussel_img carouf" src="' . $URL . '" height="300px" width="100%" alt="Second slide">';
-        for ($l = 0; $l < count($response["photo"]); $l++) {
+        for ($l = 0; $l < count($nombre["like"]); $l++) {
           $like = $nombre["like"][$l]["nombre"];
           $image = $nombre["like"][$l]["URL"];
 
@@ -51,7 +50,7 @@ if ($response["message"] == "Liste des évènements passés") {
             $like = 0;
           }
           if ($image == $URL) {
-            echo '<p class="card-text">' . $like . '</p>';
+            echo '<i class="fa fa-thumbs-up fa-2x"> '.$like.'</i>';
           }
         }
         echo ' <br />

@@ -27,10 +27,6 @@ a:link {
     border-color: black;
 }
 
-button.btn.btn-primary{
-    margin-left: 17%;
-}
-
 .btn {
     margin: auto;
     color: white;
@@ -56,14 +52,14 @@ footer a {
 
 .card {
     width: 50%;
-    background-color: black;
+    background-color: #69b3e7;
     color: white;
     margin: auto;
 }
 
 .cardt {
     width: 100%;
-    background-color: black;
+    background-color: #69b3e7;
     color: white;
 }
 
@@ -93,8 +89,23 @@ h1 {
 
 button.btn.btn-primary {
     margin-left: 17%;
+    float: left;
+
 }
 
 button.btn.btn-secondary {
-    margin-left: 27% ;
+    float: right;
+    margin-right: 17%;
 }
+
+.card-text {
+
+background-color: #69b3e7;
+
+}
+
+.card-body {
+    border-top: solid;
+}
+
+
