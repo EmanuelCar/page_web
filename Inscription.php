@@ -70,7 +70,7 @@
               <br>
 
               <input type="checkbox" id="coding" name="charte" value="coding">
-              <label for="coding">J'accepte les <a href="https://www.cesi.fr/mentions-legales/?_ga=2.19265146.357276929.1573473250-1279955483.1573032950&_gac=1.152459851.1573473250.Cj0KCQiAno_uBRC1ARIsAB496IUO56PHadiYz-OaMpSMqOPzCC4Ww4kW9AwRCaDkbqefS_sdKOyL0qcaAnM-EALw_wcB"> Conditions Générales D'utilisation</a></label>
+              <label for="coding">J'accepte les <a href="https://www.cesi.fr/mentions-legales/?_ga=2.19265146.357276929.1573473250-1279955483.1573032950&_gac=1.152459851.1573473250.Cj0KCQiAno_uBRC1ARIsAB496IUO56PHadiYz-OaMpSMqOPzCC4Ww4kW9AwRCaDkbqefS_sdKOyL0qcaAnM-EALw_wcB"> Conditions Générales D'utilisation</a>, <a href="https://www.cesi.fr/politique-de-confidentialite/?_ga=2.165462719.1686028456.1573998765-1279955483.1573032950&_gac=1.56938200.1573998765.CjwKCAiA_MPuBRB5EiwAHTTvMc8biD6aHlYOR_R0l2R8UcdhMSBgzZmKfbSKKBTpDWIb27GUm0UkmRoCBR4QAvD_BwE"> Mentions légales</a></label>
 
               <br>
 
@@ -88,7 +88,10 @@
 
               <br>
               Pour plus d'informations : Retrouvez ici le site <a href="https://ecole-ingenieurs.cesi.fr/?gclid=Cj0KCQiAno_uBRC1ARIsAB496IUO56PHadiYz-OaMpSMqOPzCC4Ww4kW9AwRCaDkbqefS_sdKOyL0qcaAnM-EALw_wcB"> CESI</a>
-
+              <br>
+              <br>
+              Si vous faites parti du personnel ou êtes un membre du bde, veuillez contacter nous contacter par mail :<a href="bdefakecesi@gmail.com"> CESI</a>
+              <br>
               <img src="./img/logocesi.png" alt="img_cesi" height="100px">
 
     </form>
