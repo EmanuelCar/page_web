@@ -73,11 +73,12 @@ if ($response["message"] == "Liste des évènements passés") {
           $test = $respont["photos"][$k]["Évènement"];
           $commentaire = $respont["photos"][$k]["Commentaire"];
           $URLC = $respont["photos"][$k]["URL"];
-
-          if ($URL == $URLC) {
-            echo '
+          if ($commentaire != null) {
+            if ($URL == $URLC) {
+              echo '
       <h5 class="card-text">' . $mon . ' ' . $prenom . '</h5>
       <p class="card-text">' . $commentaire . '</p>';
+            }
           }
         }
         echo '</div>';
