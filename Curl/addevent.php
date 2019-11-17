@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     $response = json_decode($make_data, true);
 
     if ($response["message"] == "Ajout de l'evenement ".$nom."") {
-        header('Location: /SiteWeb/Boutique/boutique.php');
+        header('Location: /SiteWeb//Evenements_act/evenements_act.php');
     } else {
         echo $response["message"];
     }

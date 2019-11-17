@@ -90,7 +90,7 @@
               Pour plus d'informations : Retrouvez ici le site <a href="https://ecole-ingenieurs.cesi.fr/?gclid=Cj0KCQiAno_uBRC1ARIsAB496IUO56PHadiYz-OaMpSMqOPzCC4Ww4kW9AwRCaDkbqefS_sdKOyL0qcaAnM-EALw_wcB"> CESI</a>
               <br>
               <br>
-              Si vous faites parti du personnel ou êtes un membre du bde, veuillez contacter nous contacter par mail :<a href="bdefakecesi@gmail.com"> CESI</a>
+              Si vous faites parti du personnel ou êtes un membre du bde, veuillez nous contacter par <a href="mailto:bdefakecesi@gmail.com"> mail</a>
               <br>
               <img src="./img/logocesi.png" alt="img_cesi" height="100px">
 

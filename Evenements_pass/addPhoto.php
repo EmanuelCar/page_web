@@ -13,7 +13,7 @@ require 'photosend.php';
     <meta charset="utf-8" />
     <link rel="stylesheet" href="C:\Users\hp\Desktop\Projet WEB\Site web\assets\Vendors\bootstrap\css\bootstrap.min.css" />
     <link rel="stylesheet" href="./form_admin.css" media="screen" type="text/css" />
-    <title>Ajout de catégories</title>
+    <title>Ajout de photo</title>
 </head>
 
 <body>

@@ -99,7 +99,7 @@ button.btn.btn-secondary {
 }
 
 .card-text {
-
+block-size: auto;
 background-color: #69b3e7;
 
 }
