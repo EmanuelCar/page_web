@@ -65,6 +65,13 @@ if($_POST['submit']) {
                 $categorieu = $response2["catégories"][$j]["Nom"];
                 echo'<h4>Nos '.$categorieu.' :</h4>';
 
+                echo '<section>
+                <div class="container-fluid mx-0 pl-4">
+                    <div class="row ox-image ox-align-center ox-margin-bottom-medium">
+                        <div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2">
+                            <p style="text-align: right; font-size:x-large"> Nos Articles disponibles </p>
+                        </div>';
+                        
                 for($i = 0; $i<count($response["articles"]); $i++) {
                     $noma = $response["articles"][$i]["Nom"];
                     $prix = $response["articles"][$i]["Prix"];
@@ -90,6 +97,10 @@ if($_POST['submit']) {
                         ';
                     }
                 }
+                echo '</div>
+                </div>
+            </section>
+            ';
             } 
         } else {
             echo $response["message"];
