@@ -25,7 +25,7 @@ echo '
 				<form action="./addPanier.php" method="POST">
 				<input hidden  type="text" name="article" value="'. $noma .'" >
 				quantité:
-				<input type="text" name="quantite" id="quantite" >
+				<input type="number" min="1" name="quantite" id="quantite" >
 				<button  class="btn btn-primary">Ajouter au panier</button>
 				</form>
 				<p>'.$prix.' €</p>
