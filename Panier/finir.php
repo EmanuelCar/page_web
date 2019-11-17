@@ -35,4 +35,3 @@ for ($i = 0; $i < count($res["commande"]); $i++) {
      
         echo $response["message"];
 }
-}

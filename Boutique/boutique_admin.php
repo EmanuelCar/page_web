@@ -24,7 +24,7 @@
 
 <body>
 	<!-- Articles en vente -->
-	<?php include "Articles.php"?>
+	<?php include "Articles_admin.php"?>
 </body>
 
 
