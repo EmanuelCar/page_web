@@ -1,8 +1,4 @@
-<?php
 
-include 'finir.php';
-
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,8 +28,8 @@ include 'finir.php';
 	<!-- Bandeau -->
 	<img class="Bandeau" src="../img/boutique.png" alt="bandeau">
 	<form method="POST">
-			<button name="submit" class="btn btn-primary">Commander</button>
-		</form>
+		<button name="submit" class="btn btn-primary">Commander</button>
+	</form>
 
 </header>
 
@@ -51,7 +47,9 @@ include 'finir.php';
 
 
 
-				<?php include 'Paniersend.php'; ?>
+				<?php include 'Paniersend.php';
+				include 'finir.php';
+				?>
 
 				<!-- Séparateur -->
 				<div class="col-lg-1 col-xs-12 col-md-2 p-2 bloc my-2"> </div>
